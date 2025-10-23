@@ -1,10 +1,15 @@
 import pygame
 from classes import Drunkard
+import os
+
 
 # Setup
 pygame.init()
 CANVAS_WIDTH = 1000
 CANVAS_HEIGHT = 1000
+
+# Get the directory where main.py is located
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 
 screen = pygame.display.set_mode((CANVAS_WIDTH, CANVAS_HEIGHT))
 pygame.display.set_caption("Drunkard Walk")
@@ -51,4 +56,6 @@ pygame.quit()
 
 
 # Plot 1000 steps before starting animation
-drunkard.plot(N=int(10E5))
+drunkard.plot(N=int(10E3), save_plot=True, script_dir=SCRIPT_DIR) 
+drunkard.plot(N=int(10E4), save_plot=True, script_dir=SCRIPT_DIR) 
+drunkard.plot(N=int(10E5), save_plot=True, script_dir=SCRIPT_DIR)  
