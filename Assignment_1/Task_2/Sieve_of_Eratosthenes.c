@@ -47,6 +47,8 @@ int main() {
             break;
         }
     }
-
+    
+    free(is_prime);
+    free(n);
     return 0;
 }
