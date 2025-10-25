@@ -1,9 +1,5 @@
 
-a)
-
-The 10^3 steps plot has highest distance from origin of around 187.5 units, while the 10^4 steps plot has that of around 650 units. 
-
-The 10^3 steps plot has relatively more stable "trendline" as compared to the 10^4 steps plot.
+The plots for (10^3) and (10^4) steps represent the random movement of a drunkard, so their behavior depends on the randomly generated values. However, the maximum distance covered in the (10^3) plot is roughly 3–4 times smaller than that in the (10^4) plot.
 
 
 b)
