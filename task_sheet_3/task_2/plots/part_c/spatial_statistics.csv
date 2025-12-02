@@ -1,0 +1,2 @@
+total_positions_visited,total_visits,avg_motor_sum,std_motor_sum,avg_motor_diff,std_motor_diff,coverage_percent
+889,150000.0,-0.09897383336107372,0.09755188136156552,-0.1328627351707357,0.13202595449931898,35.56
