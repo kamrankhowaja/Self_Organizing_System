@@ -13,7 +13,7 @@ def plot_graph(x, y):
     plt.grid(True)
     plt.show()
 
-
+#BOX A
 df = pd.read_csv('task_sheet_3/sos_ex3/LEA-upload_bundle/output_data.csv')
 
 print(df.head())
