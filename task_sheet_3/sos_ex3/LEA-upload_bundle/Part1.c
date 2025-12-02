@@ -71,7 +71,7 @@ void generate_boxB_data(double initial_state){
     }
 
     // Call boxB which prints to stdout (now redirected to tmp)
-    boxB(initial_state, 10);
+    boxB(initial_state, 100);
 
     // Restore stdout
     fflush(stdout);
@@ -113,7 +113,7 @@ void generate_boxB_data(double initial_state){
 
 int main() {
     int n = NUM_POINTS;
-    double initial_state = 0.1;
+    double initial_state = 0.5;
     generate_boxA_data(n);
     generate_boxB_data(initial_state);
     return 0;
