@@ -11,7 +11,7 @@ def plot_graph(x, y):
     plt.show()
 
 #BOX A
-df = pd.read_csv('task_sheet_3/sos_ex3/LEA-upload_bundle/output_data.csv')
+df = pd.read_csv('output_data.csv')
 
 print(df.head())
 print(df.info())
@@ -20,10 +20,10 @@ print(df.shape)
 plot_graph(df['Input'], df['Output_boxA'])
 
 #BOX B
-df = pd.read_csv('/home/kamran-ali/H-BRS/Semester/Self_organizing_system/Assignments/Self_Organizing_System/boxB_output.csv')
+# df = pd.read_csv('boxB_output.csv')
 
-print(df.head())
-print(df.info())
-print(df.shape)
-# print(sum(df['time']),sum(df['value']))
-plot_graph(df['time'], df['value'])
+# print(df.head())
+# print(df.info())
+# print(df.shape)
+# # print(sum(df['time']),sum(df['value']))
+# plot_graph(df['time'], df['value'])

@@ -1,7 +1,7 @@
 // to run gcc -o Part1 Part1.c ex-1/blackbox1.c -lm
 // ./Part1
 
-#include "ex-1/blackbox1.h"  
+#include "../ex-1/blackbox1.h"  
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
