@@ -8,20 +8,23 @@ class IsingModel:
         self.energy = energy
         self.spin = np.random.choice([-1, 1], size=(n, n))
         self.grid = self.spin.copy()
-        if plot:
-            self.ising_model_via_metroplois_algorithm_with_plot()
-        else:
-            self.ising_model_via_metroplois_algorithm()
+        self.plot = plot
+        # if plot:
+        #     pass
+        # else:
+        #     self.ising_model_via_metroplois_algorithm()
 
 
     def make_grid(self):
-        grid = np.zeros((self.n, self.n))
-        for i in range(self.n):
-            for j in range(self.n):
-                grid[i, j] = self.spin[i, j]
-        print("Grid created:")
-        print(grid)
-        return grid
+        self.grid = self.spin.copy()
+        return self.grid
+        # grid = np.zeros((self.n, self.n))
+        # for i in range(self.n):
+        #     for j in range(self.n):
+        #         grid[i, j] = self.spin[i, j]
+        # print("Grid created:")
+        # print(grid)
+        # return grid
     
     def visualize_grid(self):
         plt.imshow(self.grid, cmap='gray')
@@ -74,26 +77,17 @@ class IsingModel:
                 print("Spin flip rejected.")
                 return False
 
-    def ising_model_via_metroplois_algorithm(self):
+    # def ising_model_via_metroplois_algorithm(self):
 
-        self.grid = self.make_grid()
-        self.visualize_grid()
-        r_node = self.random_node()
-        delta_e = self.delta_E_calc(r_node)
-        status = self.accept_reject(delta_e)
-        if status:
-            i, j = r_node
-            self.spin[i, j] *= -1
-            self.grid = self.spin
-
-    def ising_model_via_metroplois_algorithm_with_plot(self):
-
-        self.grid = self.make_grid()
-        self.visualize_grid()
-        r_node = self.random_node()
-        delta_e = self.delta_E_calc(r_node)
-        status = self.accept_reject(delta_e)
-
+    #     self.grid = self.make_grid()
+    #     self.visualize_grid()
+    #     r_node = self.random_node()
+    #     delta_e = self.delta_E_calc(r_node)
+    #     status = self.accept_reject(delta_e)
+    #     if status:
+    #         i, j = r_node
+    #         self.spin[i, j] *= -1
+    #         self.grid = self.spin
 
     def metropolis_step(self):
         node = self.random_node()
@@ -101,7 +95,7 @@ class IsingModel:
         if self.accept_reject(dE):
             i, j = node
             self.spin[i, j] *= -1  
-        self.grid = self.spin  
+        self.grid = self.spin.copy()
 
     def magnetization(self):
         return int(self.spin.sum())
