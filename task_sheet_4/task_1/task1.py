@@ -3,6 +3,12 @@ import matplotlib.pyplot as plt
 import os
 os.makedirs("plots", exist_ok=True)
 
+""" 
+Took some Referemce from : https://www.youtube.com/watch?v=T72QoIOSbzY for understanding ising Model 
+and https://rajeshrinet.github.io/blog/2014/ising-model/ to undersatnd the spin nature
+"""
+
+
 def plot_timeseries(T, t, E, M):
     """Plot energy and magnetization time series"""
     # Energy plot
